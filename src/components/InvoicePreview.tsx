@@ -61,7 +61,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({
             <h1 className="text-xl font-bold mb-2">TAX INVOICE</h1>
           </div>
           
-          <div className="grid grid-cols-2 gap-6 mt-4">
+          <div className="grid grid-cols-2 gap-6 mt-4 p-6">
             {/* Company Details */}
             <div>
               <h2 className="font-bold text-base mb-2">{invoiceData.companyDetails.name}</h2>
