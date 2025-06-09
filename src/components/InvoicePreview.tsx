@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Download, Printer } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 import { InvoiceData } from '@/types/invoice';
 import { generatePDF } from '@/utils/pdfGenerator';
 
@@ -24,10 +24,6 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({
     }
   };
 
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <div className="p-6">
       {showControls && (
@@ -39,10 +35,6 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({
             </Button>
           )}
           <div className="space-x-2">
-            <Button onClick={handlePrint} variant="outline">
-              <Printer className="w-4 h-4 mr-2" />
-              Print
-            </Button>
             <Button onClick={handleDownloadPDF}>
               <Download className="w-4 h-4 mr-2" />
               Download PDF
