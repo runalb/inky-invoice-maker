@@ -103,7 +103,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
       description: '',
       hsnCode: '',
       gstRate: 5,
-      quantity: 1,
+      quantity: 0,
       rate: 0,
       unit: 'Nos',
       amount: 0
@@ -285,7 +285,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
           <div className="space-y-4">
             {items.map((item, index) => (
               <div key={item.id} className="grid grid-cols-12 gap-4 p-4 border rounded-lg">
-                <div className="col-span-4">
+                <div className="col-span-3">
                   <Label>Description</Label>
                   <Input
                     value={item.description}
@@ -301,7 +301,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     placeholder="HSN Code"
                   />
                 </div>
-                <div className="col-span-1">
+                <div className="col-span-2">
                   <Label>Quantity</Label>
                   <Input
                     type="number"
