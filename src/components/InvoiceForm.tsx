@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -285,8 +284,8 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
         <CardContent>
           <div className="space-y-4">
             {items.map((item, index) => (
-              <div key={item.id} className="grid grid-cols-1 md:grid-cols-6 gap-4 p-4 border rounded-lg">
-                <div>
+              <div key={item.id} className="grid grid-cols-12 gap-4 p-4 border rounded-lg">
+                <div className="col-span-4">
                   <Label>Description</Label>
                   <Input
                     value={item.description}
@@ -294,7 +293,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     placeholder="Item description"
                   />
                 </div>
-                <div>
+                <div className="col-span-2">
                   <Label>HSN/SAC</Label>
                   <Input
                     value={item.hsnCode}
@@ -302,7 +301,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     placeholder="HSN Code"
                   />
                 </div>
-                <div>
+                <div className="col-span-1">
                   <Label>Quantity</Label>
                   <Input
                     type="number"
@@ -310,7 +309,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     onChange={(e) => updateItem(item.id, 'quantity', parseFloat(e.target.value) || 0)}
                   />
                 </div>
-                <div>
+                <div className="col-span-2">
                   <Label>Rate</Label>
                   <Input
                     type="number"
@@ -319,7 +318,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     onChange={(e) => updateItem(item.id, 'rate', parseFloat(e.target.value) || 0)}
                   />
                 </div>
-                <div>
+                <div className="col-span-2">
                   <Label>Amount</Label>
                   <Input
                     type="number"
@@ -328,7 +327,7 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({ onSubmit, onUpdate, initialDa
                     className="bg-gray-50"
                   />
                 </div>
-                <div className="flex items-end">
+                <div className="col-span-1 flex items-end">
                   <Button
                     type="button"
                     variant="destructive"
