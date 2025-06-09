@@ -27,7 +27,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({
   return (
     <div className="p-6">
       {showControls && (
-        <div className="flex justify-between items-center mb-6 print:hidden">
+        <div className="flex justify-between items-center mb-6">
           {onBack && (
             <Button onClick={onBack} variant="outline">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -125,12 +125,12 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({
           <table className="w-full border-collapse border border-gray-300">
             <thead>
               <tr className="bg-gray-100">
-                <th className="border border-gray-300 p-2 text-xs">Sr. No.</th>
-                <th className="border border-gray-300 p-2 text-xs">Description of Goods</th>
-                <th className="border border-gray-300 p-2 text-xs">HSN/SAC</th>
-                <th className="border border-gray-300 p-2 text-xs">Quantity</th>
-                <th className="border border-gray-300 p-2 text-xs">Rate</th>
-                <th className="border border-gray-300 p-2 text-xs">Amount</th>
+                <th className="border border-gray-300 p-2 text-xs w-12">Sr. No.</th>
+                <th className="border border-gray-300 p-2 text-xs w-2/5">Description of Goods</th>
+                <th className="border border-gray-300 p-2 text-xs w-20">HSN/SAC</th>
+                <th className="border border-gray-300 p-2 text-xs w-16">Quantity</th>
+                <th className="border border-gray-300 p-2 text-xs w-20">Rate</th>
+                <th className="border border-gray-300 p-2 text-xs w-20">Amount</th>
               </tr>
             </thead>
             <tbody>
